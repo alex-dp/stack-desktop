@@ -1,0 +1,135 @@
+@font-face { font-family: roboto; src: url('fonts/Roboto-Regular.ttf'); }
+
+input {
+    width: 80vw;
+    height: auto;
+    font-family: roboto;
+    font-size: 12pt;
+    background: 0;
+    color: #ffffff;
+    padding: 6pt;
+    font-weight: normal;
+    border: 0;
+    outline: 0;
+    vertical-align: middle;
+}::selection {
+    background: #ffb7b7;
+}:focus {outline: 0;}
+
+button {
+    border: 0;
+    background: 0;
+    -webkit-app-region: no-drag;
+}:focus {outline: 0}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    min-width: 200;
+    min-height: 200;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #f0f0f0;
+}
+
+webview {
+    border: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #FFFFFF;
+}
+
+.window-action {
+    height: 18pt;
+    width: 18pt;
+    vertical-align: middle;
+    margin: 6pt;
+}
+
+.window-action:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.openmenu {
+    height: 18pt;
+    width: 18pt;
+    vertical-align: middle;
+}
+
+.openmenu:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.action.more {
+    background: transparent;
+    border: none;
+    height: 32pt;
+    float: right;
+}
+
+.action.more:focus + .sheet {
+    opacity: 1;
+}
+
+.sheet[opacity=1] {
+    pointer-events: all;
+}
+
+.sheet {
+    pointer-events: none;
+    transition-duration: 0.3s;
+    position: absolute;
+    top: 81;
+    right: 0;
+    margin: 0.25rem;
+    height: 200pt;
+    width: 150pt;
+    background: white;
+    z-index: 3;
+    overflow: hidden;
+    opacity: 0;
+    transform-origin: right top;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.sheet button {
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
+    padding: 0.75rem 1rem;
+    opacity: 1;
+}
+
+.menubutton {
+    pointer-events: visible;
+    font-family: roboto;
+    font-size: 12pt;
+    padding: 8pt;
+}
+
+#about-app-name {
+    font-family: roboto;
+    font-size: 35pt;
+}
+
+#about-dev-name {
+    font-family: roboto;
+    font-size: 12pt;
+    color: #404040;
+}
+
+#get-source {
+    font-family: roboto;
+    font-size: 10pt;
+    color: #202020;
+    -webkit-app-region: no-drag;
+}
+
+#close {
+    -webkit-app-region: no-drag;
+    margin: 8pt;
+}
+#close:hover {
+    background: rgba(0, 0, 0, 0.4);
+}

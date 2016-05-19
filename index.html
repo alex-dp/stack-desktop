@@ -1,0 +1,54 @@
+<head>
+    <link rel="stylesheet"
+        type="text/css"
+        href="style.css"/>
+    <title>Stack</title>
+</head>
+<body min-width="150" minheight="100" autosize="on">
+
+    <script src="./main.js"></script>
+    <script src="./about.js"></script>
+    <script src="./webview.js"></script>
+
+    <div style="width: 100vw; height: auto; background: #00838F; -webkit-app-region: drag;">
+        <button onclick="window.close()">
+            <img src="images/close.png" class="window-action"/>
+        </button>
+
+        <button onclick="toggleMax()">
+            <img src="images/maximize.png" class="window-action"/>
+        </button>
+    </div>
+
+    <div style="background: #0097a7; height: 32pt">
+
+        <button onclick="goBack()">
+            <img src="images/arrow_back.png" class="window-action">
+        </button>
+
+        <img id="favicon" class="window-action">
+
+        <input
+            onkeypress="loadPage(event)"
+            placeholder="Search or enter address"
+            type="text"
+            id="box">
+
+        <button class="action more" src="images/menu.png">
+            <img src="images/menu.png" class="openmenu">
+        </button>
+
+        <nav class="sheet" id="menu">
+            <button class="menubutton">New tab</button></br>
+            <button class="menubutton">New incognito tab</button></br>
+            <button class="menubutton">Bookmarks</button></br>
+            <button class="menubutton">Recent tabs</button></br>
+            <button class="menubutton">History</button></br>
+            <button class="menubutton">Find in page</button></br>
+            <button class="menubutton">Settings</button></br>
+            <button class="menubutton" onclick="launchAbout()">About</button>
+        </nav>
+    </div>
+
+    <webview src="http://google.com" id="webview"/>
+</body>
